@@ -1,0 +1,24 @@
+{
+  "name": "nuxt-generate-benchmarks",
+  "version": "1.0.0",
+  "description": "Benchmarks for Generating with Nuxt",
+  "license": "cc-by-4.0",
+  "author": "pimlie",
+  "scripts": {
+    "dev": "HOST=0.0.0.0 nuxt dev ./results",
+    "build": "nuxt build --spa ./results",
+    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build ./results",
+    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate ./results",
+    "deploy": "push-dir --dir=./results/dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "d3": "^5.7.0",
+    "d3-3d": "^0.0.9",
+    "lodash": "^4.17.11",
+    "nuxt": "^2.2.0"
+  },
+  "devDependencies": {
+    "push-dir": "^0.4.1"
+  }
+}
